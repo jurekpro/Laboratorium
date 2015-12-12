@@ -55,6 +55,7 @@
             color: #B11333;
         }
 
+
         #menu div {
             display: inline-block;
             padding: 10px 6px 10px 7px;
@@ -67,13 +68,86 @@
             background-color: #D4D4D4;
         }
 
-        #menu a.active div {
-            color: #B11333;
-            background-color: #DCDCDC;
+        
+    /* Nouveau menu avec sous-menus */
+       
+        nav ul ul {
+            display: none;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }    
+   
+        nav ul {
+            list-style: none;
+            position: relative;
+            display: inline-table;
+            padding: 0px;
+            margin: 0px;
+       }
+
+	   nav ul:after {
+		  content: ""; clear: both; display: block;
+	   }         
+        
+       nav ul li {
+	       float: left;
+       }
+        
+	   nav ul li:hover {
+		   background: #D4D4D4;
+	   }
+
+	   nav ul li a {
+           display: block; 
+           padding: 10px 6px 10px 7px;
+           font-size: 16px;
+           color: #B11333;
+           text-decoration: none;
+       } 
+
+       nav ul li:hover a {
+           background: #D4D4D4;
+
+       }        
+        
+       nav ul li a.active {
+            display: block; 
+            padding: 10px 6px 10px 7px;
+            background: #DCDCDC;
             font-weight: bold;
             text-decoration: none;
         }
+        
+       nav ul ul {
+	      background: #D4D4D4; padding: 0;
+	      position: absolute; top: 100%;
+       }
+        
+       nav ul ul li {
+          float: none; 
+          border-top: 1px solid #696969;
+		  border-bottom: 1px solid #696969;
+		  position: relative;
+	   }
+       nav ul ul li a {
+          padding: 10px 6px 10px 7px;
+          font-size: 14px;
+          color: #B11333;
+       }	
+       nav ul ul li a:hover {
+		  background: #D4D4D4;
+       }  
+       
+       nav ul ul ul {
+	      position: absolute; left: 100%; top:0;
+       }     
+     
 
+        
+        
+        
         #bigcontent {
             min-height: 350px;
             padding: 20px;
@@ -167,7 +241,7 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
     
-<!-- Here is the place for script Google Analytics -->
+
     
     
 </head>
@@ -181,20 +255,36 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div id="naglowek">
         <div id="logogabinetu"><img src="logogabinetu.png" alt="Logo gabinetu"/></div>
         <div id="naglowekText">
-            <span id="tytul">Title of the page&nbsp;&nbsp;&nbsp;&nbsp;Owner of the page</span><br>
+            <span id="tytul">Title of the test page&nbsp;&nbsp;&nbsp;&nbsp;Owner of the page</span><br>
             <span id="podtytul">What the page owner is supposed to do</span><br><br>
         </div>
     </div>
 
+<!-- New links -->
+<nav>
+	<ul>
+		<li><a href="#" id="link1" class="active"><div>Strona główna</div></a></li>
+		<li><a href="#" id="link2"><div>Services</div></a>
+			<ul>
+				<li><a href="#" id="link4"><div>Prices</div></a></li>
+				<li><a href="#" id="link5"><div>Google Maps</div></a></li>
+				<li><a href="#">Web Design</a>
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#" id="link3"><div>Other services</div></a>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">User Experience</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>    
 
-    <!-- Linia linków -->
-    <div id="menu">
-        <a href="#" id="link1" class="active"><div>First option</div></a>
-        <a href="#" id="link2"><div>Second</div></a>
-        <a href="#" id="link3"><div>Third</div></a>
-        <a href="#" id="link4"><div>Forth</div></a>
-        <a href="#" id="link5"><div>Google</div></a>
-    </div>
 
     <!-- Dynamiczna tresc -->
     <div id="bigcontent">
@@ -283,7 +373,7 @@ opcja Partager ou integrer carte - Integrer carte -->
         <br><br>
         Dojazd tędy i tędy. Najbliższe przystanki to taki i owaki. <br>
         Po dojściu odważnie wejść w bramę koło namalowanego tramwaju.<br>
-        Za bramą po prawej albo lewej stronie klatką na pierwsze piętro.  
+        Za bramą po prawej albo lewej stronie klatką na pierwsze piętro.<br><br>  
 <!-- Funkcja z http://www.w3schools.com/googleapi/google_maps_basic.asp pozwalająca na wyświetlenie 
    strony z Google Maps -->
         <div id="googleMap" style="width:500px;height:380px;"></div>
@@ -314,13 +404,13 @@ opcja Partager ou integrer carte - Integrer carte -->
     
 
     // podswietlenie aktualnego linka
-    $('#menu a').click(function () {
-        $('#menu a').removeClass('active');
+    $('nav ul li a').click(function () {
+        $('nav ul li a').removeClass('active');
         $(this).addClass('active');
     });
     
 </script>
-
+<!-- Here is the place for script Google Analytics -->
 </body>
 </html>
 
