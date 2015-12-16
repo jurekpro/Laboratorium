@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class=" is-copy-enabled">
+<head>
+    <title>Zagniezdzenie</title>
+
+    <!-- CSS Cascading Style Sheets -->
+    <style>
+        body {
+            font-family: sans-serif  ;
+            font-size: 14px;
+            margin: 0;
+            background-color: #36200C;
+            color: #F2E9CD;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #centeredContainer {
+            width: 910px;
+            margin: 0 auto;
+        }
+
+        #bigcontent {
+            min-height: 450px;
+            padding: 29px;
+            background-color: #F2FFFF;
+            color: #36200C;
+            font-size: 14px;
+        }
+    
+        #bigmenu div {
+            display: inline-block;
+            padding: 10px 6px 10px 7px;
+            font-size: 14px;
+            margin: 0;
+            color: #000000;
+        }
+
+        #bigmenu a:hover  div {
+            background-color: #be4b2f;
+        }
+
+        #bigmenu a.active div {
+            color: #000000;
+            background-color: #F2E9CD;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        #naglowek {
+            height: 75px;
+            padding: 24px 10px;
+            font-family: sans-serif;
+        }
+
+        #naglowekText {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        #tytul {
+            font-size: 21px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        #podtytul {
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        #bigcontentGB {
+            min-height: 450px;
+            padding: 29px;
+            background-color: #F2FFFF;
+            color: #36200C;
+            font-size: 14px;
+        }        
+        
+        #naglowekGB {
+            height: 75px;
+            padding: 24px 10px;
+            font-family: sans-serif;
+        }
+
+        #naglowekTextGB {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        #tytulGB {
+            font-size: 21px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        #podtytulGB {
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        #bigcontentPL {
+            min-height: 450px;
+            padding: 29px;
+            background-color: #F2FFFF;
+            color: #36200C;
+            font-size: 14px;
+        }         
+        
+        #naglowekPL {
+            height: 75px;
+            padding: 24px 10px;
+            font-family: sans-serif;
+        }
+
+        #naglowekTextPL {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        #tytulPL {
+            font-size: 21px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        #podtytulPL {
+            font-size: 16px;
+            vertical-align: top;
+        }        
+          
+        #menu div {
+            display: inline-block;
+            padding: 10px 6px 10px 7px;
+            font-size: 14px;
+            margin: 0;
+            color: #000000;
+        }
+
+        #menu a:hover  div {
+            background-color: #be4b2f;
+        }
+
+        #menu a.active div {
+            color: #000000;
+            background-color: #F2E9CD;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #menuGB div {
+            display: inline-block;
+            padding: 10px 6px 10px 7px;
+            font-size: 14px;
+            margin: 0;
+            color: #000000;
+        }
+
+        #menuGB a:hover  div {
+            background-color: #be4b2f;
+        }
+
+        #menuGB a.active div {
+            color: #000000;
+            background-color: #F2E9CD;
+            font-weight: bold;
+            text-decoration: none;
+        }        
+  
+        #menuPL div {
+            display: inline-block;
+            padding: 10px 6px 10px 7px;
+            font-size: 14px;
+            margin: 0;
+            color: #000000;
+        }
+
+        #menuPL a:hover  div {
+            background-color: #be4b2f;
+        }
+
+        #menuPL a.active div {
+            color: #000000;
+            background-color: #F2E9CD;
+            font-weight: bold;
+            text-decoration: none;
+        }        
+        
+        #content {
+            min-height: 350px;
+            padding: 29px;
+            background-color: #F2E9CD;
+            color: #36200C;
+            font-size: 14px;
+        }
+
+        #content0GB {
+            min-height: 350px;
+            padding: 29px;
+            background-color: #F2E9CD;
+            color: #36200C;
+            font-size: 14px;
+        }
+
+        #content0PL {
+            min-height: 350px;
+            padding: 29px;
+            background-color: #F2E9CD;
+            color: #36200C;
+            font-size: 14px;
+        }        
+        
+        .centered {
+            text-align: center;
+        }
+
+        .margin20 {
+            margin-left: 16em;
+        }
+
+        .Textbold {
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #36200C;
+        }
+
+        #Textitalic {
+            font-family: sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: normal;
+            color: #36200C;
+        }
+
+        #Textbolditalic {
+            font-family: sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+            color: #36200C;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+<!-- Wysrodkowanie tresci -->
+<div id="centeredContainer">
+
+    <!--- Menu wybru wersji językowej --->
+    <div id="bigmenu">
+        <a href="#" id="linkGB" class="active"><img src="GBsmall.jpg" alt="GB flag"/></a>
+        <a href="#" id="linkPL"><img src="PLsmall.jpg" alt="Polska flaga"/></a>
+    </div>
+    <br>
+    
+    <div id="bigcontent">
+    
+        <!-- Nagłówek: ikon i dwie linie tytułowe -->
+        <div id="naglowek">
+            <div id="naglowekText">
+                <span id="tytul">Title in English</span><br>
+                <span id="podtytul">subtitle in English</span>
+            </div>
+        </div>
+
+
+    <!-- Linia linków -->
+        <div id="menu">
+            <a href="#" id="link1" class="active"><div>First page 0</div></a>
+            <a href="#" id="link2"><div>Second page 0</div></a>
+        </div>
+
+
+        <!-- Dynamiczna tresc -->
+        <div id="content">
+            <!-- Afficchage du Content 1 sur la page de garde -->
+            <div class="centered">
+            This is the first page 0
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Contenu caché des fenetres succcessifs -->
+
+<div id="bigcontentGB" class="hidden">
+    <!-- Nagłówek GB: ikon i dwie linie tytułowe -->
+    <div id="naglowek">
+        <div id="naglowekText">
+            <span id="tytulGB">Title in English GB</span><br>
+            <span id="podtytulGB">Subtitle in English GB</span>
+        </div>
+    </div>
+    <!-- Linia linków -->
+    <div id="menuGB">
+        <a href="#" id="link1GB" class="active"><div>First page 1</div></a>
+        <a href="#" id="link2GB"><div>Second page 1</div></a>
+    </div>    
+ 
+    <!-- Initial GB after link flag  -->
+    <div id="content0GB">
+        <div class="centered">
+            This is the first page 1 - 0 initial
+        </div>
+    </div>
+    
+    <!-- First GB -->
+    <div id="content1GB" class="hidden">
+        <div class="centered">
+            This is the first page 1
+        </div>
+    </div>
+
+    <!-- Second GB -->
+    <div id="content2GB" class="hidden">
+        <br><span class="Textbold">&nbsp;&nbsp;Second page 1</span>
+    </div>
+</div>
+
+<div id="bigcontentPL" class="hidden">
+    <!-- Nagłówek PL: ikon i dwie linie tytułowe -->
+    <div id="naglowekPL">
+        <div id="naglowekTextPL">
+            <span id="tytulPL">Tytuł po polsku</span><br>
+            <span id="podtytulPL">Podtytuł po polsku</span>
+        </div>
+    </div>
+
+    <!-- Linia linków -->
+    <div id="menuPL">
+        <a href="#" id="link1PL" class="active"><div>Pierwsza strona</div></a>
+        <a href="#" id="link2PL"><div>Druga strona</div></a>
+    </div>     
+ 
+    <!-- Initial PL after link flag -->
+    <div id="content0PL">
+        <div class="centered">
+            To jest zawartość pierwszej strony początkowa
+        </div>
+    </div>
+    
+    <!-- First PL -->
+    <div id="content1PL" class="hidden">
+        <div class="centered">
+            To jest zawartość pierwszej strony
+        </div>
+    </div>
+
+    <!-- Second PL -->
+    <div id="content2PL" class="hidden">
+        <br><span class="Textbold">&nbsp;&nbsp;Druga strona</span>
+    </div>
+</div>
+    
+    
+<!-- JQUERY - biblioteka -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- JAVA SCRIPT -->
+<script language="javascript">
+
+    $("#linkGB").click(function () {
+        $("#bigcontent").html($("#bigcontentGB").html());
+    });
+    $("#linkPL").click(function () {
+        $("#bigcontent").html($("#bigcontentPL").html());
+    });
+    
+    $("#link1").click(function () {
+        $("#content").html($("#content1GB").html());
+    });
+    $("#link2").click(function () {
+        $("#content").html($("#content2GB").html());
+    });
+    
+    $("#link1GB").click(function () {
+        $("#content0GB").html($("#content1GB").html());
+    });
+    $("#link2GB").click(function () {
+        $("#content0GB").html($("#content2GB").html());
+    });
+   
+    $("#link1PL").click(function () {
+        $("#content0PL").html($("#content1PL").html());
+    });
+    $("#link2PL").click(function () {
+        $("#content0PL").html($("#content2PL").html());
+    });    
+    
+    // podswietlenie aktualnego linka
+    $('#menu a').click(function () {
+        $('#menu a').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#menuGB a').click(function () {
+        $('#menuGB a').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#menuPL a').click(function () {
+        $('#menuPL a').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+
+</body>
+</html>
+
